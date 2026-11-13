@@ -83,7 +83,7 @@ public class Main extends Application {
 
         // Initialize dropdown menu/options
 
-        ComboBox<String> courseDropdown = new ComboBox<> (
+        ComboBox<String> courseDropdown = new ComboBox<>(
                 FXCollections.observableArrayList(
                         "Software Engineering Technician",
                         "Software Engineering Technology",
@@ -144,31 +144,31 @@ public class Main extends Application {
             String program = courseDropdown.getValue();
 
             // Validation
-            if(studentId.isEmpty()) {
+            if (studentId.isEmpty()) {
                 statusLabel.setStyle("-fx-text-fill: red;");
                 statusLabel.setText("Error: Student ID is required.");
                 return;
             }
 
-            if(fullName.isEmpty()) {
+            if (fullName.isEmpty()) {
                 statusLabel.setStyle("-fx-text-fill: red;");
                 statusLabel.setText("Error: Fullname is required.");
                 return;
             }
 
-            if(email.isEmpty()) {
+            if (email.isEmpty()) {
                 statusLabel.setStyle("-fx-text-fill: red;");
                 statusLabel.setText("Error: email is required");
                 return;
             }
 
-            if(!email.contains("@") || !email.contains(".")) {
+            if (!email.contains("@") || !email.contains(".")) {
                 statusLabel.setStyle("-fx-text-fill: red;");
                 statusLabel.setText("Error: Invalid email format.");
                 return;
             }
 
-            if(program == null || program.isEmpty()) {
+            if (program == null || program.isEmpty()) {
                 statusLabel.setStyle("-fx-text-fill: red;");
                 statusLabel.setText("Error: Please select a program.");
                 return;
@@ -192,7 +192,6 @@ public class Main extends Application {
             statusLabel.setStyle("-fx-text-fill: green;");
             statusLabel.setText("Form Reset.");
         });
-
 
 
         // Initializing scene and insert it into stage
